@@ -1,3 +1,5 @@
+package chapter1;
+
 public class PrintATable1_4 {
     public static void main(String[] args){
         final Object[][] table = new String[5][];

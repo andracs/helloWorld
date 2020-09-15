@@ -1,3 +1,5 @@
+package chapter1;
+
 public class AverageSpeedInKilometers1_12 {
     public static void main(String[] args){
 
