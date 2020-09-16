@@ -20,7 +20,7 @@ public class Moms {
         System.out.println("Indtast en købssum!: ");
         double koebsSum = input.nextDouble();
 
-        double momsBeregningDK= plusMoms(koebsSum);
+        double momsBeregningDK= plusDanskMoms(koebsSum);
         double momsBeregningDE= plusTyskMoms(koebsSum);
 
         System.out.println("Du skal betale $" + momsBeregningDK + " i moms");
@@ -28,7 +28,7 @@ public class Moms {
         System.out.println("Medmindre du skal betale tysk moms, så skal du kun af med $" + momsBeregningDE + " i moms");
     }
 
-    public static double plusMoms(double koebsSum){
+    public static double plusDanskMoms(double koebsSum){
         double momsSatsDK = 0.25;
         double moms =koebsSum*momsSatsDK;
         return moms;
