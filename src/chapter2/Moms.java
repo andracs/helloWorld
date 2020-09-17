@@ -15,19 +15,20 @@ import java.util.Scanner;
 
 public class Moms {
     public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
 
         System.out.println("Indtast en købssum!: ");
         double koebsSum = input.nextDouble();
 
-        double momsBeregningDK= plusDanskMoms(koebsSum);
-        double momsBeregningDE= plusTyskMoms(koebsSum);
+        double momsBeregningDK = plusDanskMoms(koebsSum);
+        double momsBeregningDE = plusTyskMoms(koebsSum);
 
         System.out.println("Du skal betale $" + momsBeregningDK + " i moms");
 
         System.out.println("Medmindre du skal betale tysk moms, så skal du kun af med $" + momsBeregningDE + " i moms");
-    }
 
+    }
     public static double plusDanskMoms(double koebsSum){
         double momsSatsDK = 0.25;
         double moms =koebsSum*momsSatsDK;
