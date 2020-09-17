@@ -11,22 +11,22 @@ public class DisplayTime {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         // Prompt the user for input
-        System.out.print("Indtast et helt talt for sekunder: ");
+        System.out.print("Indtast et helt tal for sekunder: ");
         int sekunder = input.nextInt();
 
-        double resultatMinutter = OmregnSekunderTilMinutterMinutter(sekunder);
-        double resultatSekunder = OmregnSekunderTilMinutterSekunder(sekunder);
+        double resultatMinutter = omregnSekunderTilMinutterMinutter(sekunder);
+        double resultatSekunder = omregnSekunderTilMinutterSekunder(sekunder);
 
         System.out.println(sekunder + " sekunder er " + resultatMinutter +
                 " minutter og " + resultatSekunder + " sekunder");
     }
 
-    public static double OmregnSekunderTilMinutterMinutter(int sekunder){
+    public static double omregnSekunderTilMinutterMinutter(int sekunder){
         int minutter = sekunder / 60; // Omregn minutter til sekunder
         return minutter;
     }
 
-    public static double OmregnSekunderTilMinutterSekunder(int sekunder){
+    public static double omregnSekunderTilMinutterSekunder(int sekunder){
         double resterendeSekunder = sekunder % 60; // Seconds remaining
         return resterendeSekunder;
     }
