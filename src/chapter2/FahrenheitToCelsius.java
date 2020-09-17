@@ -12,17 +12,15 @@ public class FahrenheitToCelsius {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter a degree in Fahrenheit: ");
+        System.out.print("Indtast temperaturen i fahrenheit: ");
         double fahrenheit = input.nextDouble();
-        //make the fahrenheit act like an int
-        int typecastFahrenheit = (int)fahrenheit;
 
-        System.out.println("Fahrenheit " + typecastFahrenheit + " is " +
-                calculateFahrenheitToCelsius(typecastFahrenheit) + " in Celsius");
+        System.out.println("Fahrenheit " + fahrenheit + " er " +
+                beregnFahrenheitTilGraderCelsius(fahrenheit) + " i grader celsius");
     }
-    public static double calculateFahrenheitToCelsius(int typecastFahrenheit){
-        // Convert Fahrenheit to Celsius
-        double celsius = (5.0 / 9) * (typecastFahrenheit - 32);
+    public static double beregnFahrenheitTilGraderCelsius(double fahrenheit){
+        // Omregner Fahrenheit til Celsius
+        double celsius = (5.0 / 9) * (fahrenheit - 32);
         return celsius;
     }
 }
