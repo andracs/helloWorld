@@ -14,13 +14,15 @@ public class FahrenheitToCelsius {
 
         System.out.print("Enter a degree in Fahrenheit: ");
         double fahrenheit = input.nextDouble();
+        //make the fahrenheit act like an int
+        int typecastFahrenheit = (int)fahrenheit;
 
-        System.out.println("Fahrenheit " + fahrenheit + " is " +
-                calculateFahrenheitToCelsius(fahrenheit) + " in Celsius");
+        System.out.println("Fahrenheit " + typecastFahrenheit + " is " +
+                calculateFahrenheitToCelsius(typecastFahrenheit) + " in Celsius");
     }
-    public static double calculateFahrenheitToCelsius(double fahrenheit){
+    public static double calculateFahrenheitToCelsius(int typecastFahrenheit){
         // Convert Fahrenheit to Celsius
-        double celsius = (5.0 / 9) * (fahrenheit - 32);
+        double celsius = (5.0 / 9) * (typecastFahrenheit - 32);
         return celsius;
     }
 }
