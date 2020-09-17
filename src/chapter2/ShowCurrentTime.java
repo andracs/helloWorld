@@ -7,29 +7,29 @@ public class ShowCurrentTime {
 
     public static void VisAktuelTid(){
         // Obtain the total milliseconds since midnight, Jan 1, 1970
-        long totalMilliseconds = System.currentTimeMillis();
+        long totalMilisekunder = System.currentTimeMillis();
 
         // Obtain the total seconds since midnight, Jan 1, 1970
-        long totalSeconds = totalMilliseconds / 1000;
+        long totalSekunder = totalMilisekunder / 1000;
 
         // Compute the current second in the minute in the hour
-        long currentSecond = totalSeconds % 60;
+        long nuvaerendeSekunder = totalSekunder % 60;
 
         // Obtain the total minutes
-        long totalMinutes = totalSeconds / 60;
+        long totalMinutter = totalSekunder / 60;
 
         // Compute the current minute in the hour
-        long currentMinute = totalMinutes % 60;
+        long nuvaerendeMinutter = totalMinutter % 60;
 
         // Obtain the total hours
-        long totalHours = totalMinutes / 60;
+        long totalTimer = totalMinutter / 60;
 
         // Compute the current hour
-        long currentHour = totalHours % 24;
+        long nuvaerendeTimer = totalTimer % 24;
 
         // Display results
-        System.out.println("Current time is " + currentHour + ":"
-                + currentMinute + ":" + currentSecond + " GMT");
+        System.out.println("Nuværende tid er " + nuvaerendeTimer + ":"
+                + nuvaerendeMinutter + ":" + nuvaerendeSekunder + " GMT");
 
     }
 
